@@ -1,0 +1,229 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+input[type="number"], button, input[type="checkbox"], input[type="radio"] {
+    padding: 12px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(0, 172, 68, 0.2);
+    transform: scale(1.05);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(0, 172, 68, 0.4);
+}
+
+input[type="checkbox"]:hover, input[type="radio"]:hover {
+    transform: scale(1.2);
+}
+
+label {
+    font-size: 1.2em;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #4CAF50;
+}
+
+.password {
+    font-size: 1.4em;
+    font-weight: bold;
+    background-color: #f4f7fc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    letter-spacing: 1px;
+}
+
+.copy-btn {
+    background-color: #ff9800;
+    color: white;
+    border-radius: 6px;
+    font-size: 1.1em;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    animation: fadeIn 1s ease-out;
+}
+
+input[type="number"], button, .password, .copy-btn {
+    animation: fadeUp 1.2s ease-out;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    z-index: -1;
+    opacity: 0.6;
+    filter: blur(30px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    input[type="number"], button {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .password {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .copy-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    input[type="checkbox"], input[type="radio"] {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+input[type="number"], button, .password, .copy-btn {
+    animation: fadeUp 1.2s ease-out;
+}
+
+.container > form {
+    margin-bottom: 40px;
+}
+
+.container, .password {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.password:hover {
+    transform: scale(1.03);
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+}
